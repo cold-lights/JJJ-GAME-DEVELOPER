@@ -14,7 +14,7 @@ export default defineConfig(({mode}) => {
       viteSingleFile()
     ],
     define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY || ''),
     },
     build: {
       target: 'es2015',
